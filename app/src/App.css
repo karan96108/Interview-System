@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  background: #f5f7fb;
+}
+
+.app-layout {
+  min-height: 100vh;
+}
+
+.app-header {
+  background: linear-gradient(90deg, #1f3b73 0%, #1677ff 100%);
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+}
+
+.app-content {
+  padding: 32px;
+}
+
+.chat-window {
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(15, 35, 95, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.chat-window__container {
+  min-height: 540px;
+}
+
+.chat-window__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 32px;
+  border-bottom: 1px solid #f0f0f0;
+  gap: 16px;
+}
+
+.chat-window__messages {
+  flex: 1;
+  padding: 24px 32px;
+  background: #fbfcff;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.chat-window__composer {
+  padding: 24px 32px;
+  border-top: 1px solid #f0f0f0;
+  background: white;
+}
+
+.chat-bubble {
+  max-width: 70%;
+  border-radius: 12px;
+  padding: 16px 20px;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(15, 35, 95, 0.05);
+}
+
+.chat-bubble--assistant {
+  align-self: flex-start;
+  background: white;
+}
+
+.chat-bubble--user {
+  align-self: flex-end;
+  background: #1677ff;
+  color: white;
+}
+
+.chat-bubble--user .ant-typography {
+  color: white;
+}
+
+.chat-bubble__meta {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.table-row-active td {
+  background-color: rgba(22, 119, 255, 0.08) !important;
+}
+
+.candidate-detail .ant-card-body {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .app-content {
+    padding: 16px;
+  }
+
+  .chat-window__messages {
+    padding: 16px;
+  }
+
+  .chat-window__header,
+  .chat-window__composer {
+    padding: 16px;
+  }
+}
